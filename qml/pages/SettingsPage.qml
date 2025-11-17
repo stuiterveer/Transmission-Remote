@@ -22,8 +22,8 @@ Page {
                 Layout.fillWidth: true
             }
             TextField {
-                text: settings.host
-                onTextChanged: settings.setValue("host", text)
+                text: root.host
+                onTextChanged: root.host = text
             }
         }
         RowLayout {
@@ -34,9 +34,9 @@ Page {
                 Layout.fillWidth: true
             }
             TextField {
-                text: settings.value("port")
+                text: root.port
                 inputMethodHints: Qt.ImhDigitsOnly
-                onTextChanged: settings.setValue("port", parseInt(text))
+                onTextChanged: root.port = parseInt(text)
             }
         }
         RowLayout {
@@ -48,9 +48,9 @@ Page {
             }
 
             Switch {
-                onCheckedChanged: settings.setValue("use_ssl", checked)
+                onCheckedChanged: root.use_ssl = checked
 
-                checked: settings.use_ssl
+                checked: root.use_ssl
             }
         }
     }

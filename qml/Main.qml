@@ -33,11 +33,15 @@ UITK.MainView {
         anchors.fill: parent
     }
 
+    property string host
+    property bool use_ssl: true
+    property int port: 443
+
     Settings {
         id: settings
-        property string host
-        property bool use_ssl: true
-        property int port: 443
+        property alias host: root.host
+        property alias use_ssl: root.use_ssl
+        property alias port: root.port
     }
 
     Component.onCompleted: stack.push(Qt.resolvedUrl(

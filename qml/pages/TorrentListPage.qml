@@ -217,8 +217,7 @@ UITK.Page {
             return
         }
 
-        python.call('main.connect', [settings.value("host"), settings.value(
-                                         "port"), settings.value("use_ssl")],
+        python.call('main.connect', [root.host, root.port, root.use_ssl],
                     function (ret) {
                         var success = ret[0]
                         var error = ret[1]
