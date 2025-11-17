@@ -3,8 +3,8 @@ import io.thp.pyotherside 1.3
 import QtQuick.Controls 2.12
 import Qt.labs.settings 1.0
 
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Components 1.3 as UITK
+import Lomiri.Components.Popups 1.3
+import Lomiri.Components 1.3 as UITK
 import QtGraphicalEffects 1.0
 
 import "../components"
