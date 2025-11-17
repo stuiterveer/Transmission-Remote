@@ -1,7 +1,6 @@
 import QtQuick 2.12
 import io.thp.pyotherside 1.3
 import QtQuick.Controls 2.12
-import Qt.labs.settings 1.0
 
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components 1.3 as UITK
@@ -13,13 +12,6 @@ UITK.Page {
     property bool searchMode: false
     property bool connected: false
     property string torrentStatus: null
-
-    Settings {
-        id: settings
-        property string host
-        property bool use_ssl: true
-        property int port: 443
-    }
 
     header: UITK.PageHeader {
         title: "Torrents"

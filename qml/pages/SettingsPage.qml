@@ -2,19 +2,11 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.12
 
 import QtQuick.Controls 2.12
-import Qt.labs.settings 1.0
-
 import Ubuntu.Components 1.3
 
 Page {
     header: PageHeader {
         title: "Settings"
-    }
-    Settings {
-        id: settings
-        property string host
-        property bool use_ssl: true
-        property int port
     }
     Column {
         anchors.fill: parent

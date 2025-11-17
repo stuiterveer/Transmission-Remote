@@ -33,6 +33,13 @@ UITK.MainView {
         anchors.fill: parent
     }
 
+    Settings {
+        id: settings
+        property string host
+        property bool use_ssl: true
+        property int port: 443
+    }
+
     Component.onCompleted: stack.push(Qt.resolvedUrl(
                                           "pages/TorrentListPage.qml"))
 }
