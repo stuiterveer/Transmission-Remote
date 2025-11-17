@@ -62,10 +62,6 @@ add_custom_target(${DESKTOP_FILE_NAME} ALL
     COMMAND LC_ALL=C ${INTLTOOL_MERGE} -d -u ${CMAKE_SOURCE_DIR}/po ${CMAKE_SOURCE_DIR}/${DESKTOP_FILE_NAME}.in ${DESKTOP_FILE_NAME}
     COMMAND sed -i 's/${PROJECT_NAME}-//g' ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME}
 )
-add_custom_target(no_idea ALL
-    COMMAND pip3 install -U pip==20.3.4
-    COMMAND pip3 install --target install/vendored transmission-rpc
-)
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME} DESTINATION ${DATA_DIR})
 
